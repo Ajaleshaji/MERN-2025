@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f7fb;
+        }
+        .form-container {
+            border: none;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            color: #333333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555555;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            margin-bottom: 20px;
+            padding: 14px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        input[type="submit"], input[type="reset"], button {
+            margin-top: 12px;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="reset"] {
+            background-color: #f0ad4e;
+            color: white;
+            border: none;
+        }
+        input[type="reset"]:hover {
+            background-color: #ec971f;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-row input[type="reset"] {
+            width: 100%; 
+            margin-top: 15px;
+        }
+        .button-row button {
+            width: 100%; 
+            margin-top: 15px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h3>Login</h3>
+        <form id="loginForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required placeholder="Enter Your Name">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter Your Password">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter Your Email" pattern=".*@.*" title="Email must contain the @ symbol">
+
+            <div class="button-row">
+                <input type="submit" value="Login">
+                
+            </div>
+            <div class="button-row">
+                <input type="reset" value="Reset">
+            </div>
+            <button type="button" onclick="window.location.href='Untitled-1.html'">Return to Home</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').onsubmit = function(event) {
+            event.preventDefault();
+            window.location.href = 'Untitled-4.html'; 
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array in Table Format</title>
+</head>
+<body>
+    <h3>Array Data in Table</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable">
+
+        </tbody>
+    </table>
+
+    <script>
+      
+        const myArray = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
+        const tableBody = document.getElementById('dataTable');
+
+
+        for (let i = 0; i < myArray.length; i++) {
+   
+            const row = document.createElement('tr');
+
+       
+            const indexCell = document.createElement('td');
+            indexCell.textContent = i; 
+            row.appendChild(indexCell);
+
+          
+            const valueCell = document.createElement('td');
+            valueCell.textContent = myArray[i]; 
+            row.appendChild(valueCell);
+
+            tableBody.appendChild(row);
+        }
+    </script>
+</body>
+</html>
