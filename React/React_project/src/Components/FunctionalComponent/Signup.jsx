@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Signup = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [formData, setFormData] = useState({ username: '', password: '' }); 
+  const [formData, setFormData] = useState({ username: '', password: '' });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -15,13 +15,22 @@ const Signup = () => {
       console.log('Login:', formData);
     } else {
       console.log('Signup:', formData);
+      setIsLogin(true);
     }
     setFormData({ username: '', password: '' });
   };
 
+  const handleSwitch = () => {
+    if (isLogin) {
+      setIsLogin(false);
+    } else {
+      setIsLogin(true);
+    }
+  };
+
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h2>{isLogin ? 'Login Page' : 'Signup Page'}</h2>
+      <h2>{isLogin ? 'Signup page' : 'Login Page'}</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>
@@ -47,10 +56,10 @@ const Signup = () => {
             />
           </label>
         </div>
-        <button type="submit">{isLogin ? 'Login' : 'Signup'}</button>
+        <button type="submit">{isLogin ? 'Signup' : 'Login'}</button>
       </form>
-      <button onClick={() => setIsLogin(!isLogin)}>
-        Switch to {isLogin ? 'Signup' : 'Login'}
+      <button onClick={handleSwitch}>
+        Switch to {isLogin ? 'Login' : 'Signup'}
       </button>
     </div>
   );

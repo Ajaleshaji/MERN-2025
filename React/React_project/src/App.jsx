@@ -5,11 +5,14 @@ import Contact from './Components/FunctionalComponent/Contact'
 import Navbar from './Components/FunctionalComponent/Navbar'
 import Signup from './Components/FunctionalComponent/Signup'
 import {BrowserRouter , Routes,Route} from 'react-router-dom'
+import UseState from './Components/FunctionalComponent/Hooks/UseState'
+import UseEffect from './Components/FunctionalComponent/Hooks/useEffect'
+import UseEffectApi from './Components/FunctionalComponent/Hooks/UseEffectAPI'
 function App() {
   return (
   
       <BrowserRouter>
-      <Navbar />
+      <Navbar/>
       <Routes>
 
     <Route path="/Home" element={<Home />}></Route>
@@ -18,8 +21,11 @@ function App() {
     path="/gallery"
     element={<Gallery page="Gallery" img="SECE Logo"/>}
     ></Route>
-    <Route path="/contact" element={<Contact />}></Route>
+    <Route path="/Contact" element={<Contact />}></Route>
+    <Route path="/UseState" element={<UseState />}></Route> 
     <Route path="/Signup" element={<Signup />}></Route>
+    <Route path="/UseEffect" element={<UseEffect />}></Route>
+    <Route path="/UseEffectApi" element={<UseEffectApi />}></Route>
     </Routes>
     </BrowserRouter>
    
@@ -27,4 +33,4 @@ function App() {
 )
 }
 
-export default App
+export default App;
