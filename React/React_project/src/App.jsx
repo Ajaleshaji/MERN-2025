@@ -9,29 +9,32 @@ import UseState from './Components/FunctionalComponent/Hooks/UseState'
 import UseEffect from './Components/FunctionalComponent/Hooks/useEffect'
 import UseEffectApi from './Components/FunctionalComponent/Hooks/UseEffectAPI'
 import UseEffectAPIimage from './Components/FunctionalComponent/Hooks/UseEffectAPIimage'
+import UseRef from './Components/FunctionalComponent/Hooks/UseRef'
+import UseMemo from './Components/FunctionalComponent/Hooks/UseMemo'
+import UseCallback from './Components/FunctionalComponent/Hooks/UseCallback'
+
 function App() {
-  return (
-  
+  return (   
       <BrowserRouter>
       <Navbar/>
       <Routes>
 
     <Route path="/Home" element={<Home />}></Route>
     <Route path="/About" element={<About />}></Route>
-    <Route
-    path="/gallery"
-    element={<Gallery page="Gallery" img="SECE Logo"/>}
-    ></Route>
+    <Route path="/gallery" element={<Gallery page="Gallery" img="SECE Logo"/>}></Route>
     <Route path="/Contact" element={<Contact />}></Route>
     <Route path="/UseState" element={<UseState />}></Route> 
     <Route path="/Signup" element={<Signup />}></Route>
     <Route path="/UseEffect" element={<UseEffect />}></Route>
     <Route path="/UseEffectApi" element={<UseEffectApi />}></Route>
     <Route path="/useimg" element={<UseEffectAPIimage/>}></Route>
+    <Route path="/Useref" element={<UseRef/>}></Route>
+    <Route path="/Usememo" element={<UseMemo/>}></Route>
+    <Route path="/Usecallback" element={<UseCallback/>}></Route>
     </Routes>
     </BrowserRouter>
    
-   
+
 )
 }
 

@@ -23,13 +23,16 @@ const Navbar = () => {
                     <li><Link to="/Contact" className='link'>Contact</Link></li>
                     <li><Link to="/Signup" className='link'>Sign-up</Link></li>
                     <div>
-                    <span onMouseEnter={toggleDrop} >Hooks</span>
+                    <span onMouseEnter={toggleDrop} className="link">Hooks</span>
                     {dropdown && (
                     <ul onMouseLeave={toggleDrop}>
                         <li><Link to="/useState" className='link'>useState</Link></li>
                         <li><Link to="/useEffect" className='link'>useEffect</Link></li>
                         <li><Link to="/useEffectApi" className='link'>useEffectApi</Link></li>
                         <li><Link to="/useimg" className="link">useAPIimg</Link></li>
+                        <li><Link to="/useref" className="link">useRef</Link></li>
+                        <li><Link to="/usememo" className="link">useMemo</Link></li>
+                        <li><Link to="/usecallback" className="link">useCallback</Link></li>
                     </ul>)}
                     </div>
                 </ol>
