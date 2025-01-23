@@ -8,6 +8,7 @@ import {BrowserRouter , Routes,Route} from 'react-router-dom'
 import UseState from './Components/FunctionalComponent/Hooks/UseState'
 import UseEffect from './Components/FunctionalComponent/Hooks/useEffect'
 import UseEffectApi from './Components/FunctionalComponent/Hooks/UseEffectAPI'
+import UseEffectAPIimage from './Components/FunctionalComponent/Hooks/UseEffectAPIimage'
 function App() {
   return (
   
@@ -26,6 +27,7 @@ function App() {
     <Route path="/Signup" element={<Signup />}></Route>
     <Route path="/UseEffect" element={<UseEffect />}></Route>
     <Route path="/UseEffectApi" element={<UseEffectApi />}></Route>
+    <Route path="/useimg" element={<UseEffectAPIimage/>}></Route>
     </Routes>
     </BrowserRouter>
    
