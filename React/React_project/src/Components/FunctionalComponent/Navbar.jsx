@@ -26,6 +26,7 @@ const Navbar = () => {
                     <span onMouseEnter={toggleDrop} className="link">Hooks</span>
                     {dropdown && (
                     <ul onMouseLeave={toggleDrop}>
+                        <li><Link to='/reactlifecyclemethods'  className="link">reactlifecyclemethods</Link></li>
                         <li><Link to="/useState" className='link'>useState</Link></li>
                         <li><Link to="/useEffect" className='link'>useEffect</Link></li>
                         <li><Link to="/useEffectApi" className='link'>useEffectApi</Link></li>
@@ -33,6 +34,8 @@ const Navbar = () => {
                         <li><Link to="/useref" className="link">useRef</Link></li>
                         <li><Link to="/usememo" className="link">useMemo</Link></li>
                         <li><Link to="/usecallback" className="link">useCallback</Link></li>
+                        <li><Link to="/usecontext" className="link">usecontext</Link></li>
+                        <li><Link to="/memo" className="link">Memo</Link></li>
                     </ul>)}
                     </div>
                 </ol>

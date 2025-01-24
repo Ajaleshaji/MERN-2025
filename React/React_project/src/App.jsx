@@ -12,6 +12,10 @@ import UseEffectAPIimage from './Components/FunctionalComponent/Hooks/UseEffectA
 import UseRef from './Components/FunctionalComponent/Hooks/UseRef'
 import UseMemo from './Components/FunctionalComponent/Hooks/UseMemo'
 import UseCallback from './Components/FunctionalComponent/Hooks/UseCallback'
+import Student from './Components/FunctionalComponent/Hooks/UseContext'
+import Memo from './Components/FunctionalComponent/Memoization/Memo'
+import ReactLifecycleMethods from './Components/ClassComponents/ReactLifecycleMethods'
+
 
 function App() {
   return (   
@@ -22,6 +26,7 @@ function App() {
     <Route path="/Home" element={<Home />}></Route>
     <Route path="/About" element={<About />}></Route>
     <Route path="/gallery" element={<Gallery page="Gallery" img="SECE Logo"/>}></Route>
+    <Route path="/reactlifecyclemethods" element={<ReactLifecycleMethods />}></Route>
     <Route path="/Contact" element={<Contact />}></Route>
     <Route path="/UseState" element={<UseState />}></Route> 
     <Route path="/Signup" element={<Signup />}></Route>
@@ -31,6 +36,8 @@ function App() {
     <Route path="/Useref" element={<UseRef/>}></Route>
     <Route path="/Usememo" element={<UseMemo/>}></Route>
     <Route path="/Usecallback" element={<UseCallback/>}></Route>
+    <Route path="/usecontext" element={<Student/>}></Route>
+    <Route path="/memo" element={<Memo/>}></Route>
     </Routes>
     </BrowserRouter>
    
