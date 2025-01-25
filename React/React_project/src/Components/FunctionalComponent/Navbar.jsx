@@ -36,6 +36,7 @@ const Navbar = () => {
                         <li><Link to="/usecallback" className="link">useCallback</Link></li>
                         <li><Link to="/usecontext" className="link">usecontext</Link></li>
                         <li><Link to="/memo" className="link">Memo</Link></li>
+                        <li><Link to='/lazy' className="link">Suspense</Link></li>
                     </ul>)}
                     </div>
                 </ol>
