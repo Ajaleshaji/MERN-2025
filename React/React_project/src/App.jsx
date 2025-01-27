@@ -18,7 +18,7 @@ import ReactLifecycleMethods from './Components/ClassComponents/ReactLifecycleMe
 import LazyLoadingWithSuspense from './Components/FunctionalComponent/Memoization/LazyLoadingWithSuspense'
 import UseLocalStorage from './Components/FunctionalComponent/Hooks/UseLocalStorage'
 import HoC from './Components/FunctionalComponent/HoC/HoC'
-
+import DarkModeToggle from './Components/FunctionalComponent/Hooks/CustomHooks/DarkModeToggle'
 
 function App() {
   return (   
@@ -44,6 +44,7 @@ function App() {
     <Route path="/lazy" element={<LazyLoadingWithSuspense/>}></Route>
     <Route path="/use-custom" element={<UseLocalStorage/>}></Route>
     <Route path="/hoc" element={<HoC />}></Route>
+    <Route path="/customhooks2" element={<DarkModeToggle/>}></Route>
     </Routes>
     </BrowserRouter>
    

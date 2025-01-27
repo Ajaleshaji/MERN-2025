@@ -37,6 +37,7 @@ const Navbar = () => {
                         <li><Link to="/usecontext" className="link">usecontext</Link></li>
                         <li><Link to="/memo" className="link">Memo</Link></li>
                         <li><Link to='/lazy' className="link">Suspense</Link></li>
+                        <li><Link to="/customhooks2" className="link">UseCustomHooks2</Link></li>
                     </ul>)}
                     </div>
                 </ol>
