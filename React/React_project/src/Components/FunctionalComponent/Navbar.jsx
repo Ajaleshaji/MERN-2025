@@ -7,25 +7,27 @@ const Navbar = () => {
     var styling = { 
         textDecoration: "none", 
         listStyleType: "none", 
-        textAlign: "center"
+        textAlign: "center",
+        display:"block"
     };
     var [dropdown,showDropdown] = useState(false)
     const toggleDrop = () => {
-        showDropdown(dropdown = !dropdown)
+        showDropdown(dropdown => !dropdown)
     }
     return (
         <header>
             <nav>   
-                <ol style={styling}>
+                <ol >
                     <li><Link to="/Home" className='link'>Home</Link></li>
                     <li><Link to="/About" className='link'>About</Link></li>
                     <li><Link to="/Gallery" className='link'>Gallery</Link></li>
                     <li><Link to="/Contact" className='link'>Contact</Link></li>
                     <li><Link to="/Signup" className='link'>Sign-up</Link></li>
-                    <div>
-                    <span onMouseEnter={toggleDrop} className="link">Hooks</span>
+
+                    <div onMouseEnter={toggleDrop} onMouseLeave={toggleDrop} className="dropdown">
+                    <span className="link">Hooks</span>
                     {dropdown && (
-                    <ul onMouseLeave={toggleDrop}>
+                    <ul className="dropdown-menu" style={styling}>
                         <li><Link to='/reactlifecyclemethods'  className="link">reactlifecyclemethods</Link></li>
                         <li><Link to="/useState" className='link'>useState</Link></li>
                         <li><Link to="/useEffect" className='link'>useEffect</Link></li>
