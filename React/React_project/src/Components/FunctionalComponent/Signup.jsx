@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 
+
+<div className="signup">
+            
+<form method="post" action="http://localhost:3001/signup"></form>
+</div>
 const Signup = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({ username: '', password: '' });
